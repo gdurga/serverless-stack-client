@@ -38,7 +38,7 @@ export default function NewNote(props) {
           ? await s3Upload(file.current)
           : null;
 
-        await createNote({ content });
+        await createNote({ content, attachment });
         props.history.push("/");
       } catch (e) {
         alert(e);
